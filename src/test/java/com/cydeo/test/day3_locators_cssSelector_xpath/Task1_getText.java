@@ -1,11 +1,10 @@
 package com.cydeo.test.day3_locators_cssSelector_xpath;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1_getText {
 
@@ -20,9 +19,10 @@ public class Task1_getText {
         6- Verify error message text is as expected:
         Expected: Incorrect login or password
          */
+        //WebDriverManager.chromedriver().setup();
+        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://login1.nextbasecrm.com/");
 
