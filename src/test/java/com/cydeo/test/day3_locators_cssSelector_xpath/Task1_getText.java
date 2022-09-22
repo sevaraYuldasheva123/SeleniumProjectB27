@@ -21,7 +21,7 @@ public class Task1_getText {
          */
         //WebDriverManager.chromedriver().setup();
         //WebDriver driver = new ChromeDriver();
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("firefox");
 
         driver.manage().window().maximize();
         driver.get("https://login1.nextbasecrm.com/");
